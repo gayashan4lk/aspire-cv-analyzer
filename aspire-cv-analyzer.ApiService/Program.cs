@@ -1,3 +1,5 @@
+using Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add service defaults & Aspire components.
@@ -5,6 +7,8 @@ builder.AddServiceDefaults();
 
 // Add services to the container.
 builder.Services.AddProblemDetails();
+
+builder.Services.AddSingleton<IGenAiService, GenAiService>();
 
 var app = builder.Build();
 
@@ -33,15 +37,9 @@ app.MapGet("/hello", () => {
     return "Hello world. This app built with .NET Aspire.";
 });
 
-app.MapGet("/summary", () =>
+app.MapGet("/summary", (IGenAiService genAiService) =>
 {
-    //var request = new OpenAIRequest
-    //{
-    //    Model = "text-davinci-003",
-    //    MaxTokens = 100,
-    //    Prompt = "Once upon a time",
-    //    Temperature = 0.7,
-    //};
+    return genAiService.GetOpenAIResponseAsync("Once upon a time");
 });
 
 app.MapDefaultEndpoints();
