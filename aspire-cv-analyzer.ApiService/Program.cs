@@ -29,6 +29,21 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 });
 
+app.MapGet("/hello", () => {
+    return "Hello world. This app built with .NET Aspire.";
+});
+
+app.MapGet("/summary", () =>
+{
+    //var request = new OpenAIRequest
+    //{
+    //    Model = "text-davinci-003",
+    //    MaxTokens = 100,
+    //    Prompt = "Once upon a time",
+    //    Temperature = 0.7,
+    //};
+});
+
 app.MapDefaultEndpoints();
 
 app.Run();
