@@ -2,15 +2,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35323.107
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspire-cv-analyzer.AppHost", "aspire-cv-analyzer.AppHost\aspire-cv-analyzer.AppHost.csproj", "{DCF8CAE3-A26A-41A1-8119-14BE8F0771A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aspire-cv-analyzer.AppHost", "aspire-cv-analyzer.AppHost\aspire-cv-analyzer.AppHost.csproj", "{DCF8CAE3-A26A-41A1-8119-14BE8F0771A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspire-cv-analyzer.ServiceDefaults", "aspire-cv-analyzer.ServiceDefaults\aspire-cv-analyzer.ServiceDefaults.csproj", "{EFE75929-3305-4D29-B7F8-11E2CABCBF2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aspire-cv-analyzer.ServiceDefaults", "aspire-cv-analyzer.ServiceDefaults\aspire-cv-analyzer.ServiceDefaults.csproj", "{EFE75929-3305-4D29-B7F8-11E2CABCBF2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspire-cv-analyzer.ApiService", "aspire-cv-analyzer.ApiService\aspire-cv-analyzer.ApiService.csproj", "{ABB827D8-EF1F-4737-B790-7D4C81B01C33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aspire-cv-analyzer.ApiService", "aspire-cv-analyzer.ApiService\aspire-cv-analyzer.ApiService.csproj", "{ABB827D8-EF1F-4737-B790-7D4C81B01C33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspire-cv-analyzer.Web", "aspire-cv-analyzer.Web\aspire-cv-analyzer.Web.csproj", "{3E1CC298-1544-46CB-839C-150FB373A50B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aspire-cv-analyzer.Web", "aspire-cv-analyzer.Web\aspire-cv-analyzer.Web.csproj", "{3E1CC298-1544-46CB-839C-150FB373A50B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspire-cv-analyzer.Tests", "aspire-cv-analyzer.Tests\aspire-cv-analyzer.Tests.csproj", "{538E2F3E-2CCC-4930-B4A6-8B7D9787D06F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aspire-cv-analyzer.Tests", "aspire-cv-analyzer.Tests\aspire-cv-analyzer.Tests.csproj", "{538E2F3E-2CCC-4930-B4A6-8B7D9787D06F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
