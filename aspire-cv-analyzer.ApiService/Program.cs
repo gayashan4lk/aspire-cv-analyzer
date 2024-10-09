@@ -1,3 +1,5 @@
+using OpenAI;
+using OpenAI.Chat;
 using Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,10 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add service defaults & Aspire components.
 builder.AddServiceDefaults();
 
+builder.AddAzureOpenAIClient("openai");
+
 // Add services to the container.
 builder.Services.AddProblemDetails();
 
-builder.Services.AddSingleton<IGenAiService, GenAiService>();
+builder.Services.AddTransient<IGenAiService, GenAiService>();
 
 var app = builder.Build();
 
@@ -37,9 +41,17 @@ app.MapGet("/hello", () => {
     return "Hello world. This app built with .NET Aspire.";
 });
 
-app.MapGet("/summary", (IGenAiService genAiService) =>
+app.MapGet("/summary", (OpenAIClient openAiClient) =>
 {
-    return genAiService.GetOpenAIResponseAsync("Once upon a time");
+    var chatClient = openAiClient.GetChatClient("my-gpt-35-turbo");
+    ChatCompletion completion = chatClient.CompleteChat([
+        new SystemChatMessage("You are a personal assistant for company to provide summery of cv"),
+        new UserChatMessage("What is the meaning of life?")
+        ]);
+
+    var response = completion.Content[0].Text;
+
+    return response;
 });
 
 app.MapDefaultEndpoints();
